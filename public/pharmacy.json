@@ -1,0 +1,102 @@
+[
+    {
+        "key": "1",
+        "rank": "1",
+        "name": "Renata Pharmaceuticals Limited",
+        "mainShopLocation": "Mirpur",
+        "totalShop": "16",
+        "star": 4.5,
+        "img": "https://i.ibb.co/N2s60TQ/1.jpg",
+        "url": "https://renata-ltd.com/about-us/"
+    },
+    {
+        "key": "2",
+        "rank": "2",
+        "name": "Incepta Pharmaceuticals Limited",
+        "mainShopLocation": "Dhanmondi",
+        "totalShop": "11",
+        "star": 4.22,
+        "img": "https://i.ibb.co/qNqKkgr/2.jpg",
+        "url": "http://www.inceptapharma.com/"
+    },
+    {
+        "key": "3",
+        "rank": "3",
+        "name": "Beximco Pharmaceuticals Limited",
+        "mainShopLocation": "Mirpur",
+        "totalShop": "14",
+        "star": 3.95,
+        "img": "https://i.ibb.co/9v8J5By/3.jpg",
+        "url": "https://www.beximcopharma.com/"
+    },
+    {
+        "key": "4",
+        "rank": "4",
+        "name": "Square Pharmaceuticals Limited",
+        "mainShopLocation": "Banani",
+        "totalShop": "17",
+        "star": 3.8,
+        "img": "https://i.ibb.co/kXGCvT9/4.jpg",
+        "url": "https://www.squarepharma.com.bd/"
+    },
+    {
+        "key": "5",
+        "rank": "5",
+        "name": "Healthcare Pharmaceuticals Limited",
+        "mainShopLocation": "Gulshan",
+        "totalShop": "16",
+        "star": 3.75,
+        "img": "https://i.ibb.co/MkbYbhw/5.jpg",
+        "url": "https://www.hplbd.com/#"
+    },
+    {
+        "key": "6",
+        "rank": "6",
+        "name": "Opsonin Pharma Limited",
+        "mainShopLocation": "Mirpur",
+        "totalShop": "9",
+        "star": 3.6,
+        "img": "https://i.ibb.co/GJX3bst/6.jpg",
+        "url": "http://www.opsonin-pharma.com/"
+    },
+    {
+        "key": "7",
+        "rank": "7",
+        "name": "ACI Pharmaceuticals",
+        "mainShopLocation": "Dhanmondi",
+        "totalShop": "13",
+        "star": 3.63,
+        "img": "https://i.ibb.co/RNWr2kV/7.jpg",
+        "url": "https://www.aci-bd.com/aci-pharmaceuticals/"
+    },
+    {
+        "key": "8",
+        "rank": "8",
+        "name": "Eskayef Pharmaceuticals Limited",
+        "mainShopLocation": "Shyamoli",
+        "totalShop": "7",
+        "star": 3.59,
+        "img": "https://i.ibb.co/cQ8Lr7F/8.jpg",
+        "url": "https://www.skfbd.com/"
+    },
+    {
+        "key": "9",
+        "rank": "9",
+        "name": "Drug International Limited",
+        "mainShopLocation": "Gulshan",
+        "totalShop": "12",
+        "star": 3.57,
+        "img": "https://i.ibb.co/q1CNVkK/9.jpg",
+        "url": "https://www.drug-international.com/"
+    },
+    {
+        "key": "10",
+        "rank": "10",
+        "name": "ACME Laboratories Limited",
+        "mainShopLocation": "Gulshan",
+        "totalShop": "11",
+        "star": 3.55,
+        "img": "https://i.ibb.co/QMqTjMF/10.jpg",
+        "url": "https://www.acmeglobal.com/"
+    } 
+]

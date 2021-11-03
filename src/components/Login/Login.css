@@ -1,0 +1,33 @@
+.loginForm{
+    margin: 2% 0%;
+}
+.loginRegistration{
+    padding: 7% 5%;
+    background-color: rgb(201, 199, 198);
+    box-shadow: 0px 0px 20px gray;
+}
+.loginRegistration .labelTitle{
+    font-weight: bolder;
+}
+
+.submitBtn{
+   
+    display: flex;
+    justify-content: start;
+    padding: 1% 17%;
+  
+}
+.googleBtn{
+    padding-left: 16%;
+    margin-top: 2%;
+}
+
+.checkBoxInput{
+    height: 20px;
+    width: 20px;
+}
+.checkboxField{
+    display: flex;
+    justify-content: start;
+    padding: 1% 17%;
+}

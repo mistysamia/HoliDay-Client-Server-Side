@@ -1,0 +1,30 @@
+.reviewSectionDisplay{
+    padding:0% 7% ;
+    color:white
+}
+.reviewSection{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.reviewSection .eachReviewImg{
+    height: 450px;
+}
+.reviewSection .eachReviewImg img{
+    height: 100%;
+    width: 100%;
+}
+.eachReviewSectionCard{
+    background-color: #524552;
+    margin: 0% 4%;
+    border: none;
+}
+.eachReviewSectionCard hr{
+    margin-left: 23%;
+    height: 3px;
+}
+.eachReviewSectionCard .reviewShow{
+    height: 90px;
+}
+.eachReviewSectionCard .mainReviewSection{
+    padding: 5% 5%;
+}
