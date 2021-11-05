@@ -8,11 +8,12 @@ import { useHistory } from 'react-router';
 import StarRatings from 'react-star-ratings';
 import { packageDetailsBG } from '../../images/packageDetailsBG.jpg'
 
+
 const Packages = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useAuth();
     const location = useLocation();
-
+  const history = useHistory();
     useEffect(() => {
         console.log(location.pathname);
         console.log(location.search);
@@ -23,6 +24,9 @@ const Packages = () => {
     }
     const packages = location.state;
 
+    const handleProceedToShipping = () => {
+        history.push('/order', packages);
+    }
     return (
         <div className='container'>
             <section className='packageShow'>
@@ -52,7 +56,7 @@ const Packages = () => {
                             starEmptyColor='rgb(177, 173, 173)'
                             starRatedColor='rgb(252, 179, 23)'
                         />
-                        <button className='btnSection my-3 mx-2' >Book Now</button>
+                        <button className='btnSection my-3 mx-2' onClick={handleProceedToShipping}>Book Now</button>
                     </section>
                 </section>
             </section>

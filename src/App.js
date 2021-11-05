@@ -14,6 +14,7 @@ import Packages from './components/Packages/Packages';
 
 
 import Order from './components/Order/Order';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 // import Header from './components/Header/Header';
 // import NotFound from './components/NotFound/NotFound';
 // import Footer from './components/Footer/Footer';
@@ -25,34 +26,37 @@ import Order from './components/Order/Order';
 function App() {
   return (
     <div className="App">
-       <div className="App">
-      <AuthProvider>
-        <Router>
-          {/* <Header></Header> */}
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/order">
-              <Order></Order>
-            </Route>
-            <Route path="/register">
-              <Register></Register>
-            </Route>
-            <PrivateRoute path="/packages">
-              <Packages></Packages>
-            </PrivateRoute>
-          </Switch>
-          {/* <Footer></Footer>  */}
-        </Router>
-      </AuthProvider>
-    </div>
+      <div className="App">
+        <AuthProvider>
+          <Router>
+            {/* <Header></Header> */}
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="/home">
+                <Home></Home>
+              </Route>
+              <Route path="/login">
+                <Login></Login>
+              </Route>
+              <Route path="/placeOrder">
+                <PlaceOrder></PlaceOrder>
+              </Route>
+              <Route path="/order">
+                <Order></Order>
+              </Route>
+              <Route path="/register">
+                <Register></Register>
+              </Route>
+              <PrivateRoute path="/packages">
+                <Packages></Packages>
+              </PrivateRoute>
+            </Switch>
+            {/* <Footer></Footer>  */}
+          </Router>
+        </AuthProvider>
+      </div>
     </div>
   );
 }

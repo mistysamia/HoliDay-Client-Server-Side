@@ -11,6 +11,7 @@ const Order = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useAuth();
     const location = useLocation();
+    const history = useHistory();
 
     useEffect(() => {
         console.log(location.pathname);
@@ -24,7 +25,7 @@ const Order = () => {
     const packages = location.state;
     let packagePrice = packages.price;
     const [price, setPrice] = useState([packagePrice]);
-
+    const [code, setCode] = useState([0]);
     let codeUsed = 0;
 
     const hadnlePromoCode = () => {
@@ -38,13 +39,18 @@ const Order = () => {
             console.log(packagePrice);
             document.getElementById('alert').style.display = "none";
             setPrice(packagePrice);
+            setCode(20);
         }
         else if (codeUsed != 1) {
             setPrice(packagePrice);
+            setCode(0);
             document.getElementById('alert').style.display = "block";
         }
     }
-
+    const handleProceedToShipping = () => {
+            history.push('/placeOrder', [packages, price, code]);
+       
+    }
     console.log('result ', packagePrice, "  ", price);
     return (
         <div className='container'>
@@ -68,8 +74,8 @@ const Order = () => {
                                 <h4 className='text-start'>${packages.price}</h4>
                             </article>
                         </div>
-                    
-                       
+
+
 
                     </section>
                     <section className='cart col-12 col-md-4'>
@@ -77,7 +83,7 @@ const Order = () => {
                         <div className='cartDetails'>
                             <h5 className='text-start'> Payable Total: <span className='price'>${price}</span></h5>
                             <hr />
-                            <label class="rad-label">
+                            <label className="rad-label">
                                 <input type="radio" className="rad-input" name="rad" />
                                 <div className="rad-design"></div>
                                 <div className="rad-text">Visa Card</div>
@@ -99,8 +105,8 @@ const Order = () => {
                                 <p className="mb-0">Enter the promo code correctly.</p>
                             </article>
                             <div >
-                             <button className='btnSection my-3 mx-2' >Book Now</button>
-                        </div>
+                                <button className='btnSection my-3 mx-2' onClick={handleProceedToShipping} >Place Order</button>
+                            </div>
                         </div>
 
                     </section>
