@@ -10,8 +10,7 @@ import './PlaceOrder.css';
 
 
 const PlaceOrder = () => {
-
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const location = useLocation();
     const history = useHistory();
@@ -21,9 +20,7 @@ const PlaceOrder = () => {
         console.log(location.search);
         console.log(location.state);
     }, [location]);
-    const onSubmit = data => {
-        console.log(data)
-    }
+ 
 
     const packages = location.state[0];
     const price = location.state[1];
@@ -31,23 +28,25 @@ const PlaceOrder = () => {
     let packagePrice = packages.price;
 
 
-    const handleProceedToShipping = () => {
-        var forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    history.push('/home');
-                    form.classList.add('was-validated')
-                }, false)
+    const onSubmit = data => {
+       
+        data.package = packages;
+ console.log(data);
+        fetch(`https://spooky-spell-89697.herokuapp.com/packagerequest`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId) {
+                    alert('Order processed Successfully');
+                    reset();
+                }
             })
-
-    }
+    };
     return (
         <div className='container'>
             <section className='placeOrderShow'>
@@ -57,7 +56,7 @@ const PlaceOrder = () => {
                         <div className='PlaceOrderTitle'>
                             <h2>Make your Holiday Memorable with <span className='title'>HOLIDAY</span></h2>
                         </div>
-                        <form className="row g-3 mt-5 placeOrderForm needs-validation" novalidate>
+                        <form className="row g-3 mt-5 placeOrderForm needs-validation"  onSubmit={handleSubmit(onSubmit)}>
                             <div className="col-12">
                                 <input type="email" className="form-control"
                                     id="inputEmail4" value={user.displayName} readOnly required />
@@ -69,26 +68,26 @@ const PlaceOrder = () => {
 
                             <div className="col-12">
                                 <input type="text" className="form-control" id="inputAddress" placeholder="Address..." required />
-                                <div class="invalid-feedback">
+                                <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
 
                             <div className="col-md-5">
                                 <input type="text" className="form-control" id="inputCity" placeholder="Country..." required />
-                                <div class="invalid-feedback">
+                                <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div className="col-md-4">
                                 <input type="text" className="form-control" id="inputCity" placeholder="City..." required />
-                                <div class="invalid-feedback">
+                                <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div className="col-md-3">
                                 <input type="text" className="form-control" id="inputZip" placeholder="Zip Code..." required />
-                                <div class="invalid-feedback">
+                                <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
@@ -102,9 +101,10 @@ const PlaceOrder = () => {
                             </div>
 
                             <div >
-                                <button className='btnSection my-3 mx-2' onClick={handleProceedToShipping} >Submit</button>
+                                <button className='btnSection my-3 mx-2' type="submit">Submit</button>
                             </div>
                         </form>
+
                     </section>
                     <section className='cart col-12 col-md-4'>
                         <h2 className='mb-5'>Checkout Summary</h2>
