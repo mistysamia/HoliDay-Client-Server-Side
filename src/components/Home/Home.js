@@ -11,14 +11,14 @@ import PackageDisplay from '../PackageDisplay/PackageDisplay';
 import homeContact from '../../images/homeContact.jpg'
 import Quotes from '../Quotes/Quotes';
 import Footer from '../Footer/Footer';
-
-
+import useCart from '../../hooks/useCart';
+import { addToDb } from '../../utilities/fakedb';
 
 const Home = () => {
 
     const [packages, setPackages] = useState([]);
     const [displayPackages, setDisplayPackages] = useState([]);
-
+    const [cart, setCart] = useCart();
 
     useEffect(() => {
         fetch(`https://spooky-spell-89697.herokuapp.com/packages`)
@@ -30,13 +30,31 @@ const Home = () => {
     }, []);
 
 
+    // const handleAddToCart = (product) => {
+    //     const exists = cart.find(pd => pd.key === product.key);
+    //     let newCart = [];
+    //     if (exists) {
+    //         const rest = cart.filter(pd => pd.key !== product.key);
+    //         exists.quantity = exists.quantity + 1;
+    //         newCart = [...rest, product];
+    //     }
+    //     else {
+    //         product.quantity = 1;
+    //         newCart = [...cart, product];
+    //     }
+    //     setCart(newCart);
+       
+    //     addToDb(product.key);
+
+    // }
+
 
     return (
         <div>
             {/* Header Part Starts */}
             <section className='headBg'>
                 <article className='headerTitle'>
-                    <p className='headerTitleName mb-3'>Holyday</p>
+                    <p className='headerTitleName mb-3'>Holiday</p>
                     <div className='headerTitleNameDetails'>
                         <p >Find, compare, and book sightseeing tours, attractions,
                         </p>

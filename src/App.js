@@ -12,6 +12,8 @@ import { registerVersion } from '@firebase/app';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Packages from './components/Packages/Packages';
 
+
+import Order from './components/Order/Order';
 // import Header from './components/Header/Header';
 // import NotFound from './components/NotFound/NotFound';
 // import Footer from './components/Footer/Footer';
@@ -36,6 +38,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/order">
+              <Order></Order>
             </Route>
             <Route path="/register">
               <Register></Register>

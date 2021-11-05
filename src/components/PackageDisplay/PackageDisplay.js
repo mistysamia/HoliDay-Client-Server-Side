@@ -4,15 +4,19 @@ import './PackageDisplay.css';
 import StarRatings from 'react-star-ratings';
 import { useHistory } from 'react-router';
 import { SiVerizon } from "react-icons/si";
-
+import { Link } from 'react-router-dom';
 
 const PackageDisplay = (props) => {
     const { img, packagename, price, placename, day, review } = props.packages;
 
     const history = useHistory();
 
+    const handleToShowDetails = () => {
+        history.push('/packages', props.packages);
+    }
+
     const handleProceedToShipping = () => {
-        history.push('/packages',props.packages);
+        history.push('/order', props.packages);
     }
     return (
         <div>
@@ -24,10 +28,12 @@ const PackageDisplay = (props) => {
                     <div className='eachPackageDisplayDetails'>
                         <h1>${price}</h1>
                         <div>
-                        <button className='btnSectionDetails my-3 mx-2' onClick={handleProceedToShipping} >See Details</button>
-                        <button className='btnSection my-3' onClick={handleProceedToShipping} >Book Now</button>
+                            <button className='btnSectionDetails my-3 mx-2' onClick={handleToShowDetails} >See Details</button>
+
+                            <button className='btnSection my-3' onClick={handleProceedToShipping}>Book Now</button>
                         </div>
-                      
+
+
                         <h5 className='text-start mb-3'>  {packagename}</h5>
                         <p className='text-start'><SiVerizon /> {placename}</p>
                         <p className='text-start'><SiVerizon /> {day}</p>
@@ -43,7 +49,7 @@ const PackageDisplay = (props) => {
                     </div>
                 </section>
             </section>
-        </div>
+        </div >
     );
 };
 
