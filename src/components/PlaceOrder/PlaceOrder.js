@@ -20,7 +20,7 @@ const PlaceOrder = () => {
         console.log(location.search);
         console.log(location.state);
     }, [location]);
- 
+
 
     const packages = location.state[0];
     const price = location.state[1];
@@ -29,9 +29,15 @@ const PlaceOrder = () => {
 
 
     const onSubmit = data => {
-       
+        data.name=user.displayName;
+        data.email=user.email;
+        data.address=document.getElementById('inputAddress').value;
+        data.city=document.getElementById('inputCity').value;
+        data.country=document.getElementById('inputCountry').value;
+        data.zipcode=document.getElementById('inputZip').value;
+        data.number=document.getElementById('inputNumber').value;
         data.package = packages;
- console.log(data);
+        console.log(data);
         fetch(`https://spooky-spell-89697.herokuapp.com/packagerequest`, {
             method: 'POST',
             headers: {
@@ -56,7 +62,7 @@ const PlaceOrder = () => {
                         <div className='PlaceOrderTitle'>
                             <h2>Make your Holiday Memorable with <span className='title'>HOLIDAY</span></h2>
                         </div>
-                        <form className="row g-3 mt-5 placeOrderForm needs-validation"  onSubmit={handleSubmit(onSubmit)}>
+                        <form className="row g-3 mt-5 placeOrderForm needs-validation" onSubmit={handleSubmit(onSubmit)}>
                             <div className="col-12">
                                 <input type="email" className="form-control"
                                     id="inputEmail4" value={user.displayName} readOnly required />
@@ -80,7 +86,7 @@ const PlaceOrder = () => {
                                 </div>
                             </div>
                             <div className="col-md-4">
-                                <input type="text" className="form-control" id="inputCity" placeholder="City..." required />
+                                <input type="text" className="form-control" id="inputCountry" placeholder="City..." required />
                                 <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -92,7 +98,7 @@ const PlaceOrder = () => {
                                 </div>
                             </div>
                             <div className="col-md-12">
-                                <input type="tel" className="form-control" id="inputZip" placeholder="Contact Number..." required />
+                                <input type="tel" className="form-control" id="inputNumber" placeholder="Contact Number..." required />
                             </div>
                             <div className="col-md-12">
                                 <input type="datetime-local" id="meeting-time"
