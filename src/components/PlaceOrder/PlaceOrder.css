@@ -10,7 +10,9 @@
  .placeOrderShow .PlaceOrderTitle .title{
     color: #ff5d22;
  }
-
+.x{
+    display: none;
+}
  .placeOrderForm{
     border: 1px solid rgb(206, 206, 219);
     box-shadow: 0px 0px 20px gray;

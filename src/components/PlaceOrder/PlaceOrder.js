@@ -7,7 +7,10 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 import './PlaceOrder.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+import { Button, Modal } from 'react-bootstrap';
 
 const PlaceOrder = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -27,15 +30,47 @@ const PlaceOrder = () => {
     const code = location.state[2];
     let packagePrice = packages.price;
 
+    const [address, setAddress] = useState([]);
+    const handleAddress = event => {
+        const addressSet = event.target.value;
+        setAddress(addressSet);
+    }
+    const [country, setCountry] = useState([]);
+    const handleCountry = event => {
+        const countrySet = event.target.value;
+        setCountry(countrySet);
+    }
+
+    const [city, setCity] = useState([]);
+    const handleCity = event => {
+        const citySet = event.target.value;
+        setCity(citySet);
+    }
+
+    const [zip, setZip] = useState([]);
+    const handleZip = event => {
+        const zipSet = event.target.value;
+        setZip(zipSet);
+    }
+
+    const [number, setNumber] = useState([]);
+    const handleNumber = event => {
+        const numberSet = event.target.value;
+        setNumber(numberSet);
+    }
+    const [showModal, setShow] = useState(false);
+    let x = false;
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(x);
 
     const onSubmit = data => {
-        data.name=user.displayName;
-        data.email=user.email;
-        data.address=document.getElementById('inputAddress').value;
-        data.city=document.getElementById('inputCity').value;
-        data.country=document.getElementById('inputCountry').value;
-        data.zipcode=document.getElementById('inputZip').value;
-        data.number=document.getElementById('inputNumber').value;
+        data.name = user.displayName;
+        data.email = user.email;
+        data.address = address;
+        data.city = city;
+        data.country = country;
+        data.zipcode = zip;
+        data.number = number;
         data.package = packages;
         console.log(data);
         fetch(`https://spooky-spell-89697.herokuapp.com/packagerequest`, {
@@ -48,11 +83,15 @@ const PlaceOrder = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert('Order processed Successfully');
+                    setShow(true);
                     reset();
                 }
             })
     };
+
+    const handleProceedToHome = () => {
+        history.push('/home');
+    }
     return (
         <div className='container'>
             <section className='placeOrderShow'>
@@ -73,32 +112,32 @@ const PlaceOrder = () => {
                             </div>
 
                             <div className="col-12">
-                                <input type="text" className="form-control" id="inputAddress" placeholder="Address..." required />
+                                <input type="text" className="form-control" id="inputAddress" placeholder="Address..." required onChange={handleAddress} />
                                 <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
 
                             <div className="col-md-5">
-                                <input type="text" className="form-control" id="inputCity" placeholder="Country..." required />
+                                <input type="text" className="form-control" id="inputCity" placeholder="Country..." required onChange={handleCity} />
                                 <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div className="col-md-4">
-                                <input type="text" className="form-control" id="inputCountry" placeholder="City..." required />
+                                <input type="text" className="form-control" id="inputCountry" placeholder="City..." required onChange={handleCountry} />
                                 <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div className="col-md-3">
-                                <input type="text" className="form-control" id="inputZip" placeholder="Zip Code..." required />
+                                <input type="text" className="form-control" id="inputZip" placeholder="Zip Code..." required onChange={handleZip} />
                                 <div className="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div className="col-md-12">
-                                <input type="tel" className="form-control" id="inputNumber" placeholder="Contact Number..." required />
+                                <input type="tel" className="form-control" id="inputNumber" placeholder="Contact Number..." required onChange={handleNumber} />
                             </div>
                             <div className="col-md-12">
                                 <input type="datetime-local" id="meeting-time"
@@ -107,7 +146,24 @@ const PlaceOrder = () => {
                             </div>
 
                             <div >
-                                <button className='btnSection my-3 mx-2' type="submit">Submit</button>
+                                <button className='btnSection my-3 mx-2' type="submit" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop" data-bs-target="#exampleModal" onClick={handleShow}>Submit</button>
+                                <Modal
+                                    show={showModal}
+                                    onHide={handleClose}
+                                    backdrop="static"
+                                    keyboard={false}
+                                >
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Modal title</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        Woohoo, Order processed Successfully!
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="primary" onClick={handleProceedToHome}>Okay</Button>
+                                    </Modal.Footer>
+                                </Modal>
                             </div>
                         </form>
 
@@ -128,8 +184,10 @@ const PlaceOrder = () => {
 
 
                 </section>
+
+
             </section>
-        </div>
+        </div >
     );
 };
 
