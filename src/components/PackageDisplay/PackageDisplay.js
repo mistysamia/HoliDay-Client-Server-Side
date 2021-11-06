@@ -35,7 +35,7 @@ const PackageDisplay = (props) => {
 
 
                         <h5 className='text-start mb-3'>  {packagename}</h5>
-                        <p className='text-start'><SiVerizon /> {placename}</p>
+                        <p className='text-start placename'><SiVerizon /> {placename}</p>
                         <p className='text-start'><SiVerizon /> {day}</p>
                         <div className='starReview'>
                             <StarRatings
