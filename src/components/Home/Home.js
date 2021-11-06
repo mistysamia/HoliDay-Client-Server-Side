@@ -103,7 +103,7 @@ const Home = () => {
 
 
              <Quotes></Quotes>
-           <Footer></Footer>
+         
 
            
         </div>

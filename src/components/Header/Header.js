@@ -9,7 +9,7 @@ const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <div >
-            <nav className="  navbar fixed-top navbar-expand-lg navbar-dark HeaderBgColor d-flex justify-content-between container">
+            <nav className="  navbar fixed-top navbar-expand-lg navbar-dark HeaderBgColor d-flex justify-content-between ">
                 <section className="container-fluid ">
                     <article className="d-flex justify-content-between">
                         <div className="logo">
@@ -32,7 +32,7 @@ const Header = () => {
 
                             <NavLink to="/allorders"> <a className="nav-link active px-3 pageName" href="">All Orders</a></NavLink>
 
-                            <NavLink to="/health"><a className="nav-link active px-3 pageName HEALTH" href="" >HEALTH</a></NavLink>
+                            <NavLink to="/newservice"><a className="nav-link active px-3 pageName HEALTH" href="" >Add a new Service</a></NavLink>
                             {
                                 user.email ?
                                     <a onClick={logOut} href="" className='logoutBtn mt-2 px-3' style={{ color: 'white' }}>LOGOUT</a>

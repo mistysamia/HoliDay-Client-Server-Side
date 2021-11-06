@@ -5,25 +5,38 @@ import allOrderImg3 from '../../images/allOrderImg3.jpg'
 import OrderRequest from '../OrderRequest/OrderRequest';
 import { useEffect, useState } from 'react';
 import './AllOrders.css'
+import Choose from '../Choose/Choose';
+import AllOrdersDisplay from '../AllOrdersDisplay/AllOrdersDisplay';
+import CompanyName from '../CompanyName/CompanyName';
 
 const AllOrders = () => {
 
 
     const [packageRequest, setPackageRequest] = useState([]);
     const [displayRequest, setDisplayRequest] = useState([]);
-    
+
+
+
 
     useEffect(() => {
         fetch(`https://spooky-spell-89697.herokuapp.com/orderrequest`)
             .then(res => res.json())
             .then(data => {
-             
                 setPackageRequest(data.orderrequest);
                 setDisplayRequest(data.orderrequest);
-               
             });
     }, []);
 
+
+    const [allOrderDisplay, setallOrderDisplay] = useState([]);
+    useEffect(() => {
+        fetch(`https://spooky-spell-89697.herokuapp.com/allorderdisplay`)
+            .then(res => res.json())
+            .then(data => {
+                setallOrderDisplay(data.allOrderDisplay);
+                console.log("eka ",data.allOrderDisplay);
+            });
+    }, []);
 
 
     return (
@@ -57,21 +70,36 @@ const AllOrders = () => {
             </section>
             {/* Header Part Ends */}
 
-            
+
             <div className="container mb-5 newOrderReq">
-            <h1 className='newOrdersTitle'>New Orders </h1>
+                <h1 className='newOrdersTitle'>New Orders </h1>
                 <article className=''>
                     {
                         displayRequest.map(request => <OrderRequest
                             key={request.key}
                             request={request}
-                          
+
                         >
                         </OrderRequest>)
                     }
                 </article>
+
+
             </div>
-         
+            <Choose></Choose>
+            <div className=''>
+                <article className='allOrderDisplay'>
+                    {
+                        allOrderDisplay.map(request => <AllOrdersDisplay
+                            key={request.key}
+                            orders={request}
+                        >
+                        </AllOrdersDisplay>)
+                    }
+                </article>
+            </div>
+           <CompanyName></CompanyName>
+
         </div>
     );
 };

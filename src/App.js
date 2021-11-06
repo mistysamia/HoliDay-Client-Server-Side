@@ -16,8 +16,8 @@ import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import Header from './components/Header/Header';
 import AllOrders from './components/AllOrders/AllOrders';
 // import NotFound from './components/NotFound/NotFound';
-// import Footer from './components/Footer/Footer';
-// import Ambulance from './components/Ambulance/Ambulance';
+import Footer from './components/Footer/Footer';
+import NewService from './components/NewService/NewService';
 // import Health from './components/Health/Health';
 
 
@@ -54,8 +54,11 @@ function App() {
               <PrivateRoute path="/allorders">
                 <AllOrders></AllOrders>
               </PrivateRoute>
+              <PrivateRoute path="/newservice">
+              <NewService></NewService>
+              </PrivateRoute>
             </Switch>
-            {/* <Footer></Footer>  */}
+            <Footer></Footer> 
           </Router>
         </AuthProvider>
       </div>

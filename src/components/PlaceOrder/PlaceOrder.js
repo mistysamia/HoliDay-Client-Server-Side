@@ -27,6 +27,7 @@ const PlaceOrder = () => {
 
     const packages = location.state[0];
     const price = location.state[1];
+    console.log("placeorder ",price);
     const code = location.state[2];
     let packagePrice = packages.price;
 
@@ -68,8 +69,9 @@ const PlaceOrder = () => {
     let x = false;
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(x);
+    const Id= Math.random()*100000;
+    const userId = Id.toString();
 
-    
 
     const onSubmit = data => {
         data.name = user.displayName;
@@ -81,6 +83,10 @@ const PlaceOrder = () => {
         data.number = number;
         data.date = date;
         data.package = packages;
+        data.userId = userId;
+        data.price=price;
+        data.img=packages.img;
+       
         console.log(data);
         fetch(`https://spooky-spell-89697.herokuapp.com/packagerequest`, {
             method: 'POST',

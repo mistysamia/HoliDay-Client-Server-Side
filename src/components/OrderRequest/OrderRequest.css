@@ -11,8 +11,11 @@
 .eachRequest h5{
     color: rgb(30, 0, 128);
 }
-.btnSection{
+.eachRequest .btnSection{
    margin-top: 8%;
    display: flex;
    align-items: flex-end;
+}
+.toast{
+    z-index: 11;
 }
