@@ -11,11 +11,10 @@ import AuthProvider from './context/AuthProvider';
 import { registerVersion } from '@firebase/app';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Packages from './components/Packages/Packages';
-
-
 import Order from './components/Order/Order';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
-// import Header from './components/Header/Header';
+import Header from './components/Header/Header';
+import AllOrders from './components/AllOrders/AllOrders';
 // import NotFound from './components/NotFound/NotFound';
 // import Footer from './components/Footer/Footer';
 // import Ambulance from './components/Ambulance/Ambulance';
@@ -29,7 +28,7 @@ function App() {
       <div className="App">
         <AuthProvider>
           <Router>
-            {/* <Header></Header> */}
+            <Header></Header>
             <Switch>
               <Route exact path="/">
                 <Home></Home>
@@ -51,6 +50,9 @@ function App() {
               </Route>
               <PrivateRoute path="/packages">
                 <Packages></Packages>
+              </PrivateRoute>
+              <PrivateRoute path="/allorders">
+                <AllOrders></AllOrders>
               </PrivateRoute>
             </Switch>
             {/* <Footer></Footer>  */}

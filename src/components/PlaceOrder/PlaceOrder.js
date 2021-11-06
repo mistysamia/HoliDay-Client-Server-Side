@@ -58,10 +58,18 @@ const PlaceOrder = () => {
         const numberSet = event.target.value;
         setNumber(numberSet);
     }
+
+    const [date, setDate] = useState([]);
+    const handleDate = event => {
+        const dateSet = event.target.value;
+        setDate(dateSet);
+    }
     const [showModal, setShow] = useState(false);
     let x = false;
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(x);
+
+    
 
     const onSubmit = data => {
         data.name = user.displayName;
@@ -71,6 +79,7 @@ const PlaceOrder = () => {
         data.country = country;
         data.zipcode = zip;
         data.number = number;
+        data.date = date;
         data.package = packages;
         console.log(data);
         fetch(`https://spooky-spell-89697.herokuapp.com/packagerequest`, {
@@ -142,7 +151,7 @@ const PlaceOrder = () => {
                             <div className="col-md-12">
                                 <input type="datetime-local" id="meeting-time"
                                     name="meeting-time" value="2021-06-12T19:30"
-                                    min="2018-06-07T00:00" max="2025-06-14T00:00" className="form-control" required />
+                                    min="2018-06-07T00:00" max="2025-06-14T00:00" className="form-control" onChange={handleDate} required />
                             </div>
 
                             <div >
