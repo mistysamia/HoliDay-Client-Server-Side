@@ -32,6 +32,8 @@ const Header = () => {
 
                             <NavLink to="/allorders"> <a className="nav-link active px-3 pageName" href="">All Orders</a></NavLink>
 
+                            <NavLink to="/myorder"> <a className="nav-link active px-3 pageName" href="">My Orders</a></NavLink>
+
                             <NavLink to="/newservice"><a className="nav-link active px-3 pageName HEALTH" href="" >Add a new Service</a></NavLink>
                             {
                                 user.email ?

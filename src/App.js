@@ -18,6 +18,7 @@ import AllOrders from './components/AllOrders/AllOrders';
 // import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import NewService from './components/NewService/NewService';
+import MyOrder from './components/MyOrder/MyOrder';
 // import Health from './components/Health/Health';
 
 
@@ -53,6 +54,9 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path="/allorders">
                 <AllOrders></AllOrders>
+              </PrivateRoute>
+              <PrivateRoute path="/myorder">
+                <MyOrder></MyOrder>
               </PrivateRoute>
               <PrivateRoute path="/newservice">
               <NewService></NewService>

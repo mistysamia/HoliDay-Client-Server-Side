@@ -1,0 +1,46 @@
+
+.eachMyOrder{
+    border-top:1px  solid rgba(238, 149, 201, 0.774);
+    display: grid;
+    grid-template-columns: 40% 60%; 
+    padding: 3% 14%;
+}
+
+.eachMyOrderSection .bookingDetails , .eachMyOrderSection .packageDetails{
+    margin: 0% 5%;
+    padding: 5%;
+    text-align: start;
+    background-color: rgba(248, 248, 248, 0.89);
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 4px;
+    height: 100%;
+    border-top: 2px solid blue;
+    
+}
+.eachMyOrderSection .bookingDetails {
+    height: 70%;
+}
+.eachMyOrderSection .bookingDetails .title , .eachMyOrderSection .packageDetails .title{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px dashed rgb(175, 171, 171);
+    padding-bottom: 2%;
+}
+
+.eachMyOrderSection .packageDetailsDisplay .imgSection{
+    height: 180px;
+    width: 300px;
+}
+
+.eachMyOrderSection .packageDetailsDisplay .imgSection img{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 0px 20px gray;
+}
+.eachMyOrderSection .packageName{
+    font-size: 19px;
+    color: blue;
+}
+.eachMyOrderSection .paymentSection{
+    border-left: 1px solid gainsboro;
+}
