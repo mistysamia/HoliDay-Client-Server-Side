@@ -1,25 +1,37 @@
 .navbar {
     background: rgba(0, 0, 0, 0.6); 
+    text-transform: uppercase;
+    color: #f2f5f7;
+    padding: 0% 10%;
 }
 .navbar a{
     text-decoration: none;
-    color: black;
 }
-.logo img{
-    padding-right: 40px;
-    height: 2rem;
+.navbar .navImg{
+    font-size: 38px;
+    color: rgb(85, 189, 0);
 }
-/* .displayName{
-    padding-left: 470px;
-    padding-right: 60px;
-} */
-.HeaderBgColor {
-    color: rgb(32, 216, 0);
+.navbar .navImg:hover{
+  color: rgb(85, 189, 0);
 }
-.login{
-    padding-left: 750px;
+.navbar .navImg .title{
+  font-size: 21px;
+  color: rgb(245, 77, 10);
 }
-.logoutBtn {
-    cursor: pointer;
-    color: white;
+.navbar .navImg .title .titleDay{
+  color: rgb(248, 248, 248);
+}
+.userName{
+   font-size: 19px;
+
+}
+.userImg{
+  height: 60px;
+  width: 45px;
+  margin-left: 2%;
+}
+.userImg img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }
