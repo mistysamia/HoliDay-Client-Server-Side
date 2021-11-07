@@ -2,7 +2,6 @@ import React from 'react';
 import './Home.css';
 import { useEffect, useState } from 'react';
 import TopPackage from '../TopPackage/TopPackage';
-import PharmacyDisplay from '../PharmacyDisplay/PharmacyDisplay';
 import Article from '../Article/Article';
 import Contact from '../Contact/Contact';
 import Review from '../Review/Review';

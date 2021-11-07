@@ -32,3 +32,35 @@
 .eachAllOrderDisplay .bookingSection .btnPart{
     margin-top: 20%;
 }
+
+@media only screen and (max-width: 1125px) {
+   
+    .eachAllOrderDisplay .bookingSection{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .eachAllOrderDisplay .bookingSection .btnPart{
+        margin-top: 0%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+     .eachAllOrderDisplay{
+        grid-template-columns: repeat(1,1fr); 
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    .eachAllOrderDisplay .imgSection{
+        width: 310px;
+        
+    }
+   
+}
+@media only screen and (max-width: 380px) {
+    .eachAllOrderDisplay .imgSection{
+        width: 280px;
+        margin-left: 5%;
+    }
+   
+}

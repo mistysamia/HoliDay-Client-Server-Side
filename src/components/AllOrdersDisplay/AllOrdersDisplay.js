@@ -4,10 +4,19 @@ import { MdDelete } from "react-icons/md";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './AllOrdersDisplay.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
+
 
 const AllOrdersDisplay = (props) => {
 
     const { name, email, number, price, img, packagename,userId } = props.orders;
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const handleDeleteNewOrder = () => {
         const data = {};
@@ -22,7 +31,7 @@ const AllOrdersDisplay = (props) => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                   
+                    setShow(true);
                 }  
             })
     }
@@ -50,7 +59,24 @@ const AllOrdersDisplay = (props) => {
                             </div>
                         </article>
                         <article className='btnPart'>
-                            <button type="button" className="btn btn-danger mx-2"  onClick={handleDeleteNewOrder}><MdDelete></MdDelete> Delete</button>
+                            <Button variant="danger" onClick={handleShow}>
+                            <MdDelete></MdDelete> Delete
+                            </Button>
+
+                            <Modal show={show} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Cancel Order</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>Are you sure you want cancel the order ?</Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Close
+                                    </Button>
+                                    <Button variant="primary" onClick={handleDeleteNewOrder}>
+                                        Delete
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
                         </article>
                     </div>
 

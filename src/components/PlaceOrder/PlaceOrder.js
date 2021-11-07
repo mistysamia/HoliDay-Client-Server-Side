@@ -167,8 +167,7 @@ const PlaceOrder = () => {
                                     show={showModal}
                                     onHide={handleClose}
                                     backdrop="static"
-                                    keyboard={false}
-                                >
+                                    keyboard={false}>
                                     <Modal.Header closeButton>
                                         <Modal.Title>Modal title</Modal.Title>
                                     </Modal.Header>

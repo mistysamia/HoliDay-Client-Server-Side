@@ -26,10 +26,13 @@
     border-bottom: 1px dashed rgb(175, 171, 171);
     padding-bottom: 2%;
 }
-
+.packageDetailsDisplay{
+    display: grid;
+    grid-template-columns: 60% 40%; 
+}
 .eachMyOrderSection .packageDetailsDisplay .imgSection{
     height: 180px;
-    width: 300px;
+    width: 270px;
 }
 
 .eachMyOrderSection .packageDetailsDisplay .imgSection img{
@@ -43,4 +46,41 @@
 }
 .eachMyOrderSection .paymentSection{
     border-left: 1px solid gainsboro;
+}
+
+
+
+
+@media only screen and (max-width: 1240px) {
+
+    .eachMyOrderSection .packageDetailsDisplay .imgSection{
+        width: 240px;
+    }
+}
+
+
+@media only screen and (max-width: 1170px) {
+    .packageDetailsDisplay{
+        grid-template-columns: repeat(1,1fr); 
+    }
+    .eachMyOrderSection .packageDetailsDisplay .imgSection{
+        width: 220px;
+    }
+
+}
+@media only screen and (max-width: 605px) {
+    .eachMyOrder{
+        grid-template-columns: repeat(1,1fr);  
+    }
+    .eachMyOrderSection .bookingDetails {
+        height: 100%;
+    }
+    .eachMyOrderSection .packageDetails {
+       margin-top: 10%;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .eachMyOrderSection .packageDetailsDisplay .imgSection{
+        width: 200px;
+    }
 }

@@ -6,7 +6,7 @@ const CompanyName = () => {
         <div>
             <section className='companyName'>
                 <h1 className='mt-5'>TRUSTED BY <span className='spanCode'>20,000</span> COMPANIES</h1>
-                <div className='d-flex justify-content-evenly my-5 companyImg'>
+                <div className=' my-5 companyImg'>
                     <article className='imgSection mb-5'>
                         <img src='https://templates.envytheme.com/zash/default/assets/img/partner-image/1.png' />
                     </article>

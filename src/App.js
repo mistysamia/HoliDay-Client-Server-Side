@@ -3,7 +3,6 @@ import './App.css';
 import Home from './components/Home/Home'
 import Login from './components/Login/Login'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Pharmacy from './components/Pharmacy/Pharmacy';
 import Register from './components/Register/Register';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -19,6 +18,7 @@ import AllOrders from './components/AllOrders/AllOrders';
 import Footer from './components/Footer/Footer';
 import NewService from './components/NewService/NewService';
 import MyOrder from './components/MyOrder/MyOrder';
+import Error from './components/Error/Error';
 // import Health from './components/Health/Health';
 
 
@@ -59,10 +59,13 @@ function App() {
                 <MyOrder></MyOrder>
               </PrivateRoute>
               <PrivateRoute path="/newservice">
-              <NewService></NewService>
+                <NewService></NewService>
               </PrivateRoute>
+              <Route path="*">
+                <Error></Error>
+              </Route>
             </Switch>
-            <Footer></Footer> 
+            <Footer></Footer>
           </Router>
         </AuthProvider>
       </div>

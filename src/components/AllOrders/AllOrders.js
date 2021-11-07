@@ -34,10 +34,8 @@ const AllOrders = () => {
             .then(res => res.json())
             .then(data => {
                 setallOrderDisplay(data.allOrderDisplay);
-                console.log("eka ",data.allOrderDisplay);
             });
     }, []);
-
 
     return (
         <div>
@@ -72,21 +70,27 @@ const AllOrders = () => {
 
 
             <div className="container mb-5 newOrderReq">
-                <h1 className='newOrdersTitle'>New Orders </h1>
-                <article className=''>
-                    {
-                        displayRequest.map(request => <OrderRequest
-                            key={request.key}
-                            request={request}
-
-                        >
-                        </OrderRequest>)
-                    }
-                </article>
-
-
+                {displayRequest.length>0 ?
+                    <div>
+                        <h3 className='newOrdersTitle'>New Orders </h3>
+                        <hr/>
+                        <article className=''>
+                            {
+                                displayRequest.map(request => <OrderRequest
+                                    key={request.key}
+                                    request={request}>
+                                </OrderRequest>)
+                            }
+                        </article>
+                    </div>: <div>
+                    <h3 className='newOrdersTitle text-center'>No New Order Request </h3>
+                    </div>
+                }
             </div>
+
             <Choose></Choose>
+
+
             <div className=''>
                 <article className='allOrderDisplay'>
                     {
@@ -98,7 +102,7 @@ const AllOrders = () => {
                     }
                 </article>
             </div>
-           <CompanyName></CompanyName>
+            <CompanyName></CompanyName>
 
         </div>
     );

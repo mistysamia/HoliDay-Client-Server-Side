@@ -23,7 +23,7 @@
 }
 .deliveryUpdate .deliveryUpdateImg{
     font-size: 50px;
-    width: 38%;
+    width: 43%;
     border-radius: 50%;
     padding-bottom: 5%;
     background-color: #28a745;
@@ -34,7 +34,7 @@
 }
 .deliveryUpdate  .right{
     background-color: #c9d1ca;
-    border: 2px solid rgb(190, 8, 8);
+    border: 1.5px dashed orangered;
     animation-name: colorChanging;
     animation-duration: 2s;
     animation-iteration-count: infinite;  

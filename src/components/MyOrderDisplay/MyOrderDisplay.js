@@ -1,11 +1,40 @@
 import React from 'react';
 import './MyOrderDisplay.css'
 import useAuth from '../../hooks/useAuth';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
+import { MdDelete } from "react-icons/md";
+
 
 const MyOrderDisplay = (props) => {
 
-    const { email, address, number, country, city, img, packagename, price, zipcode } = props.myOrder;
+    const { email, address, number, country, city, img, packagename, price, zipcode,userId } = props.myOrder;
     const { user, logOut } = useAuth();
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+    const handleDeleteNewOrder = () => {
+        const data = {};
+        data.userId = userId;
+        fetch(`https://spooky-spell-89697.herokuapp.com/deleteorders`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId) {
+                    setShow(true);
+                }  
+            })
+    }
+
 
     return (
         <div>
@@ -21,17 +50,35 @@ const MyOrderDisplay = (props) => {
                         </div>
                         <div className='packageDetails'>
                             <p className='title'>Order Summary </p>
-                            <div className='packageDetailsDisplay row'>
-                                <article className='col-7 '>
+                            <div className='packageDetailsDisplay '>
+                                <article className=' '>
                                     <div className='imgSection'>
                                         <img src={img} />
                                     </div>
                                     <p className='mt-2 packageName'>{packagename}</p>
                                 </article>
-                                <article className='col-5 paymentSection'>
+                                <article className=' paymentSection'>
                                     <h5 className='my-4'>Payment </h5>
-                                    <p>Price : ${price[0]}</p>
+                                    <p>Price : ${price}</p>
                                     <p>Status : Paid</p>
+                                    <Button variant="danger" onClick={handleShow}>
+                            <MdDelete></MdDelete> Delete
+                            </Button>
+
+                            <Modal show={show} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Cancel Order</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>Are you sure you want cancel the order ?</Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Close
+                                    </Button>
+                                    <Button variant="primary" onClick={handleDeleteNewOrder}>
+                                        Delete
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
                                 </article>
 
                             </div>

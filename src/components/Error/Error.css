@@ -1,7 +1,8 @@
 .errorSection{
-    padding: 4%;
+    padding: 8% 0% 14% 0%;
     display: flex;
     justify-content: center;
+    
 }
 .errorImg{
     height: 400px;
