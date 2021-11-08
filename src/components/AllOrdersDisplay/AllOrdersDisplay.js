@@ -31,8 +31,9 @@ const AllOrdersDisplay = (props) => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    setShow(true);
+                   
                 }  
+                 setShow(false);
             })
     }
 

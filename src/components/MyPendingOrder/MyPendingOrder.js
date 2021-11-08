@@ -10,14 +10,14 @@ import { MdDelete } from "react-icons/md";
 
 const MyPendingOrder = (props) => {
 
-    const { email, address, number, country, city, img, packagename, price, zipcode,userId } = props.myOrder;
+    const { email, address, number, country, city, img, packagename, price, zipcode, userId } = props.myOrder;
     const { user, logOut } = useAuth();
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
- 
+
     const handleDeleteNewOrder = () => {
         const data = {};
         data.userId = userId;
@@ -31,14 +31,15 @@ const MyPendingOrder = (props) => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    setShow(true);
-                }  
+
+                } 
+                setShow(false);
             })
     }
 
     return (
         <div>
-             {user.email == email &&
+            {user.email == email &&
                 <section className='eachMyOrderSection'>
                     <section className='eachMyOrder'>
                         <div className='bookingDetails'>
@@ -62,23 +63,23 @@ const MyPendingOrder = (props) => {
                                     <p>Price : ${price}</p>
                                     <p>Status : Paid</p>
                                     <Button variant="danger" onClick={handleShow}>
-                            <MdDelete></MdDelete> Delete
-                            </Button>
+                                        <MdDelete></MdDelete> Delete
+                                    </Button>
 
-                            <Modal show={show} onHide={handleClose}>
-                                <Modal.Header closeButton>
-                                    <Modal.Title>Cancel Order</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>Are you sure you want cancel the order ?</Modal.Body>
-                                <Modal.Footer>
-                                    <Button variant="secondary" onClick={handleClose}>
-                                        Close
-                                    </Button>
-                                    <Button variant="primary" onClick={handleDeleteNewOrder}>
-                                        Delete
-                                    </Button>
-                                </Modal.Footer>
-                            </Modal>
+                                    <Modal show={show} onHide={handleClose}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Cancel Order</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Are you sure you want cancel the order ?</Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleClose}>
+                                                Close
+                                            </Button>
+                                            <Button variant="primary" onClick={handleDeleteNewOrder}>
+                                                Delete
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
                                 </article>
                                 <span class="badge bg-primary pending">Pending</span>
                             </div>
