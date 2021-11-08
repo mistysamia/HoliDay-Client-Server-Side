@@ -40,12 +40,12 @@ function App() {
               <Route path="/login">
                 <Login></Login>
               </Route>
-              <Route path="/placeOrder">
+              <PrivateRoute path="/placeOrder">
                 <PlaceOrder></PlaceOrder>
-              </Route>
-              <Route path="/order">
+              </PrivateRoute>
+              <PrivateRoute path="/order">
                 <Order></Order>
-              </Route>
+              </PrivateRoute>
               <Route path="/register">
                 <Register></Register>
               </Route>
