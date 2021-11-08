@@ -10,14 +10,14 @@ import PackageDisplay from '../PackageDisplay/PackageDisplay';
 import homeContact from '../../images/homeContact.jpg'
 import Quotes from '../Quotes/Quotes';
 import Footer from '../Footer/Footer';
-import useCart from '../../hooks/useCart';
-import { addToDb } from '../../utilities/fakedb';
+
+
 
 const Home = () => {
 
     const [packages, setPackages] = useState([]);
     const [displayPackages, setDisplayPackages] = useState([]);
-    const [cart, setCart] = useCart();
+    
 
     useEffect(() => {
         fetch(`https://spooky-spell-89697.herokuapp.com/packages`)
