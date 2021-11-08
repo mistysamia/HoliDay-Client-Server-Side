@@ -21,7 +21,7 @@ const MyPendingOrder = (props) => {
     const handleDeleteNewOrder = () => {
         const data = {};
         data.userId = userId;
-        fetch(`https://spooky-spell-89697.herokuapp.com/deleteorders`, {
+        fetch(`https://spooky-spell-89697.herokuapp.com/deleteordersreq`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
