@@ -16,6 +16,7 @@ const MyOrderDisplay = (props) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    console.log("name ",user);
 
     const handleDeleteNewOrder = () => {
         const data = {};

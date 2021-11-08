@@ -169,10 +169,10 @@ const PlaceOrder = () => {
                                     backdrop="static"
                                     keyboard={false}>
                                     <Modal.Header closeButton>
-                                        <Modal.Title>Add New Package </Modal.Title>
+                                        <Modal.Title>Order Placed </Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
-                                        Woohoo, New Package Added Successfully!
+                                        Woohoo, your order has been placed Successfully!
                                     </Modal.Body>
                                     <Modal.Footer>
                                         <Button variant="primary" onClick={handleProceedToHome}>Okay</Button>

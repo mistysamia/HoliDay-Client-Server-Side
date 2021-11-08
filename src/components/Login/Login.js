@@ -5,6 +5,11 @@ import initializeAuthentication from '../../Firebase/firebase.init';
 import { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { Link, useLocation, useHistory } from 'react-router-dom';
+import { FaUserAlt } from "react-icons/fa";
+import { FaUnlockAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { GiMonsteraLeaf } from "react-icons/gi";
+
 
 const googleProvider = new GoogleAuthProvider();
 initializeAuthentication();
@@ -55,6 +60,7 @@ function Login() {
   }
 
   const handleRegistration = (e) => { // if I pass e as a parameter then the page is not going to reload 
+
     e.preventDefault();
     console.log(password);
     if (!/(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}/.test(password)) {
@@ -134,54 +140,78 @@ function Login() {
     });
   }
   return (
-    <div className='container loginRegistration'>
+    <div>
+      <section className='loginRegister'>
+        <div className='designPart'>
+          <h1><span  className='mx-2'><GiMonsteraLeaf></GiMonsteraLeaf></span><span className='title'>Holi<span className='titleDay'>day</span></span></h1>
 
-
-      <form onSubmit={handleRegistration} className='mx-5 mt-5 '>
-        <h1 className='text-primary mb-4'>Please {isLogin ? 'Login' : 'Register'} </h1>
-        {!isLogin &&
-          <div className="row mb-3">
-            <label htmlFor="inputName3" className="col-sm-2 col-form-label labelTitle">Name :</label>
-            <div className="col-sm-10">
-              <input type="name" onBlur={handleNameChange} className="form-control" id="inputName3" />
-            </div>
-          </div>
-
-        }
-
-        <div className="row mb-3 ">
-          <label htmlFor="inputEmail3" className="col-sm-2 col-form-label labelTitle">Email :</label>
-          <div className="col-sm-10">
-            <input type="email" onBlur={handleEmailChange} className="form-control" id="inputEmail3" />
-          </div>
+          <ul class="squares">
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+            <li for="item in 11"></li>
+          </ul>
         </div>
+        <div className='loginResSection'>
+          <article className='loginResPart'>
+            <form onSubmit={handleRegistration} className='mx-5 mt-5 '>
+              <h3 className='mb-5'>{isLogin ? 'Login' : 'Register'}</h3>
+              {!isLogin &&
+                <div className='d-flex'>
+                  <div className='loginLogo mt-2 mx-2'>
+                    <FaUserAlt></FaUserAlt>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" title="Enter Username" onBlur={handleNameChange} required />
+                    <label>Username</label>
+                  </div>
+                </div>
+              }
+              <div className='d-flex'>
+                <div className='loginLogo mt-2 mx-2'>
+                  <MdEmail></MdEmail>
+                </div>
+                <div class="user-box">
+                  <input type="email" title="Enter Email" onBlur={handleEmailChange} required />
+                  <label>Email</label>
+                </div>
+              </div>
 
-        <div className="row mb-3">
-          <label htmlFor="inputPassword3" className="col-sm-2 col-form-label labelTitle">Password :</label>
-          <div className="col-sm-10">
-            <input type="password" onBlur={handlePasswordChange} className="form-control" id="inputPassword3" />
-          </div>
-        </div>
-        <div className='checkboxField'>
-          <input type="checkbox" onChange={handleRegisterChange} className='checkBoxInput mx-3' name="vehicle1" value="Bike"></input>
-          <label for="vehicle1"> Already Registered ?</label>
-        </div>
 
+              <div className='d-flex'>
+                <div className='loginLogo mt-2 mx-2'>
+                  <FaUnlockAlt></FaUnlockAlt>
+                </div>
+                <div class="user-box">
+                  <input type="password" title="Enter Password" onBlur={handlePasswordChange} required />
+                  <label>Password</label>
+                </div>
+              </div>
 
-        <div>
-          <p className='text-danger'>{error}</p>
-        </div>
-        <section className='submitBtn'>
-          <button type="submit" className="btn btn-primary">{isLogin ? 'Sign In' : 'Sign Up'} </button>
-          {/* <button type="button" className="btn btn-primary mx-5" onClick={handleResetPassword}>Reset Password</button> */}
-        </section>
+              <div class="box">
+                <input id="one" type="checkbox" onChange={handleRegisterChange} />
+                <span class="check"></span>
+                <label for="one">Already Registered?</label>
+              </div>
 
-      </form>
-      <section className='googleBtn'>
-        <div class="d-grid gap-2 px-5">
-          <button class="btn btn-success" onClick={handleGoogleLogin} type="button">Google Sign In</button>
+              <div>
+                <p className='text-danger'>{error}</p>
+              </div>
+              <button className='btnSection ' >{isLogin ? 'Sign In' : 'Sign Up'}</button>
+            </form>
+            <button className='btnSection mt-3' onClick={handleGoogleLogin}  >Google</button>
+            {/* <button type="button" className="btn btn-primary mx-5" onClick={handleResetPassword}>Reset Password</button> */}
+          </article>
         </div>
-      </section></div>
+      </section>
+    </div>
   );
 }
 
