@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: 40% 60%; 
     padding: 3% 14%;
+    margin: 10% 0% 0% 0%;
+
 }
 
 .eachMyOrderSection .bookingDetails , .eachMyOrderSection .packageDetails{
@@ -77,6 +79,10 @@
     }
     .eachMyOrderSection .packageDetails {
        margin-top: 10%;
+    }
+    .eachMyOrder{
+        margin: 10% 0% 3% 0%;
+    
     }
 }
 @media only screen and (max-width: 460px) {

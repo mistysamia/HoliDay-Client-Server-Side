@@ -46,7 +46,7 @@
 
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
     .packageDisplay{ 
         grid-template-columns: repeat(2,1fr);
     }

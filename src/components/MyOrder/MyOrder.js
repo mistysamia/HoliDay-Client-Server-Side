@@ -14,7 +14,7 @@ const MyOrder = () => {
             .then(res => res.json())
             .then(data => {
                 setmyOrder(data.allOrderDisplay);
-                console.log(data ," now ",data.allOrderDisplay);
+              
             });
     }, []);
 
