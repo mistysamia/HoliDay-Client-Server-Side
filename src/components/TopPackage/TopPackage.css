@@ -3,10 +3,10 @@
     grid-template-columns: repeat(3,1fr);
     padding: 5% 4%;
 }
-.eachTopPackage{
+.topPackage .eachTopPackage{
     padding: 5% 10%;
 }
-.eachTopPackage .packageDetails{
+.topPackage .eachTopPackage .packageDetails{
     background-color: #f5eef5;
     display: flex;
     justify-content: center;
@@ -18,26 +18,34 @@
     color: #352735;
     cursor: pointer;
 }
-.eachTopPackage .packageDetails hr{
+.topPackage .eachTopPackage .packageDetails hr{
     margin-left: 23%;
     height: 2px;
 }
-.packageDetailsIcon  h3{
+.topPackage .packageDetailsIcon  h3{
     font-size: 80px;
     font-weight: 900;
 }
-.eachTopPackage .packageDetails p{
+.topPackage .packageDetailsIcon  h2{
+   
+   height: 60px;
+}
+.topPackage .packageDetailsIcon p{
+   
+    height: 170px;
+ }
+.topPackage .eachTopPackage .packageDetails p{
     font-weight: 300;
 }
-.eachTopPackage .packageDetails:hover{
+.topPackage .eachTopPackage .packageDetails:hover{
     background-color: #524552;
     color: white;
     transition:  background-color 0.5s;
 }
-.eachTopPackage .packageDetails:hover .packageDetailsIcon  h3 {
+.topPackage .eachTopPackage .packageDetails:hover .packageDetailsIcon  h3 {
     color: #ff5d22; 
 }
-.eachTopPackage .packageDetails:hover hr{
+.topPackage .eachTopPackage .packageDetails:hover hr{
     background-color: #ff5d22;
 }
 

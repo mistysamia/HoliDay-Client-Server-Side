@@ -19,6 +19,8 @@ import Footer from './components/Footer/Footer';
 import NewService from './components/NewService/NewService';
 import MyOrder from './components/MyOrder/MyOrder';
 import Error from './components/Error/Error';
+import MyPendingOrder from './components/MyPendingOrder/MyPendingOrder';
+
 // import Health from './components/Health/Health';
 
 
@@ -51,6 +53,9 @@ function App() {
               </Route>
               <PrivateRoute path="/packages">
                 <Packages></Packages>
+              </PrivateRoute>
+              <PrivateRoute path="/pendingrequest">
+                <MyPendingOrder></MyPendingOrder>
               </PrivateRoute>
               <PrivateRoute path="/allorders">
                 <AllOrders></AllOrders>

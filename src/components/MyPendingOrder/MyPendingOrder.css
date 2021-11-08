@@ -49,13 +49,12 @@
 .eachMyOrderSection .paymentSection{
     border-left: 1px solid gainsboro;
 }
-.eachMyOrderSection .success{
+
+.eachMyOrderSection .pending{
     padding: 3% 0%;
     font-size: 16px;
     font-weight: 400;
 }
-
-
 
 
 @media only screen and (max-width: 1240px) {

@@ -13,10 +13,10 @@ const Review = () => {
                         <div className="card eachReviewSectionCard" >
                             <img src={reviewImg1} className="card-img-top" alt="..." />
                             <div className="card-body mainReviewSection">
-                                <h3>Ki dibo</h3>
+                                <h3>Tour Packages</h3>
                                 <hr className='w-50' />
                                 <div className='reviewShow'>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Holidays Tours and Travels organize different regular package tours to all over the worls and inside Bangladesh for different group size.</p>
                                 </div>
 
                             </div>
@@ -26,10 +26,10 @@ const Review = () => {
                         <div className="card eachReviewSectionCard" >
                             <img src={reviewImg2} className="card-img-top" alt="..." />
                             <div className="card-body mainReviewSection">
-                                <h3>Ki dibo</h3>
+                                <h3>Helicopters Rental</h3>
                                 <hr className='w-50' />
                                 <div className='reviewShow'>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">Holidays Tours and Travels, the major player in the aviation industry with a wide range of helicopters.</p>
                                 </div>
 
                             </div>
@@ -39,10 +39,10 @@ const Review = () => {
                         <div className="card eachReviewSectionCard" >
                             <img src={reviewImg3} className="card-img-top" alt="..." />
                             <div className="card-body mainReviewSection">
-                                <h3>Ki dibo</h3>
+                                <h3>Hotel booking</h3>
                                 <hr className='w-50' />
                                 <div className='reviewShow'>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">With over hundreds of hotel partners around the globe and within Bangladesh and a comprehensive offering of flight.</p>
                                 </div>
 
                             </div>

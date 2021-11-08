@@ -1,5 +1,5 @@
 import React from 'react';
-import './MyOrderDisplay.css'
+import './MyPendingOrder.css'
 import useAuth from '../../hooks/useAuth';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
@@ -7,7 +7,8 @@ import { Button, Modal } from 'react-bootstrap';
 import { MdDelete } from "react-icons/md";
 
 
-const MyOrderDisplay = (props) => {
+
+const MyPendingOrder = (props) => {
 
     const { email, address, number, country, city, img, packagename, price, zipcode,userId } = props.myOrder;
     const { user, logOut } = useAuth();
@@ -35,10 +36,9 @@ const MyOrderDisplay = (props) => {
             })
     }
 
-
     return (
         <div>
-            {user.email == email &&
+             {user.email == email &&
                 <section className='eachMyOrderSection'>
                     <section className='eachMyOrder'>
                         <div className='bookingDetails'>
@@ -80,7 +80,7 @@ const MyOrderDisplay = (props) => {
                                 </Modal.Footer>
                             </Modal>
                                 </article>
-                                <span class="badge bg-success success">Approved</span>
+                                <span class="badge bg-primary pending">Pending</span>
                             </div>
                         </div>
 
@@ -90,11 +90,8 @@ const MyOrderDisplay = (props) => {
 
             }
 
-
-
-
         </div>
     );
 };
 
-export default MyOrderDisplay;
+export default MyPendingOrder;

@@ -18,7 +18,7 @@ const Choose = () => {
                 <article className='chooseSectionDetails'>
                     <p className='title'>Your Benefits</p>
                     <h1>Why Choose Us</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Discover all of our Offers in activities, flights and hotels. Benidorm awaits you! All tourist information available. Plan your trip and enjoy more than 300 sunny days! Guaranteed fun.</p>
 
                     <div className='listSection'>
                         <article className='eachList'>
@@ -26,8 +26,8 @@ const Choose = () => {
                                 <h3>  <BsFillDiagram3Fill /> </h3>
                             </div>
                             <div className='detailsSection'>
-                                <p className='title'>Creative Space</p>
-                                <p className='details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p className='title'>Best Overall</p>
+                                <p className='details'>Their eclectic trips are extremely popular.</p>
                             </div>
                         </article>
 
@@ -36,8 +36,8 @@ const Choose = () => {
                                 <h3>  <BsAsterisk /> </h3>
                             </div>
                             <div className='detailsSection'>
-                                <p className='title'>24/7 Access</p>
-                                <p className='details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p className='title'>Best Budget</p>
+                                <p className='details'>With cycling, trekking and  volunteer has a wide range.</p>
                             </div>
                         </article>
                         <article className='eachList'>
@@ -45,8 +45,8 @@ const Choose = () => {
                                 <h3>  <BsColumnsGap /> </h3>
                             </div>
                             <div className='detailsSection'>
-                                <p className='title'>High Speed Wifi</p>
-                                <p className='details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p className='title'>Best for Families</p>
+                                <p className='details'>The company's destination portfolio ranges .</p>
                             </div>
                         </article>
                         <article className='eachList'>
@@ -54,8 +54,8 @@ const Choose = () => {
                                 <h3>  <BsFullscreenExit /> </h3>
                             </div>
                             <div className='detailsSection'>
-                                <p className='title'>Great Location</p>
-                                <p className='details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p className='title'>Best for Europe</p>
+                                <p className='details'>The expert knowledge and guides in which they operate.</p>
                             </div>
                         </article>
                         <article className='eachList'>
@@ -63,8 +63,8 @@ const Choose = () => {
                                 <h3>  <BsLayers /> </h3>
                             </div>
                             <div className='detailsSection'>
-                                <p className='title'>Car Sharing</p>
-                                <p className='details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p className='title'>Best Nature Tour</p>
+                                <p className='details'>U.K.-based Naturetrek was founded predominantly  bird watching  .</p>
                             </div>
                         </article>
                         <article className='eachList'>
@@ -72,8 +72,8 @@ const Choose = () => {
                                 <h3>  <BsBoundingBox /> </h3>
                             </div>
                             <div className='detailsSection'>
-                                <p className='title'>Weekly Events</p>
-                                <p className='details'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <p className='title'>Best Cruise</p>
+                                <p className='details'>Every participant will have an opportunity.</p>
                             </div>
                         </article>
                     </div>

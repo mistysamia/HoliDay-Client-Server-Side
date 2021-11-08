@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+<h1>Holiday</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>Being able to travel is more than just experiencing a new place and taking photos. It also brings new ideas and perspectives to the table. In today’s world, it is more important than ever to stay connected to the world. 
+<br/>
+In this project, a management system has been developed for a Travel Agency. This  system can help a travel agency to show their tour packages and customers can book their desire package through this management system.
 
-## Available Scripts
+<a href=" https://holyday-84b35.web.app/" 
+target='_blank'>Visit My Website</a>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h3>Features </h3>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>For User : </p>
+<h6>• User authentication 
+</h6>
+<h6>• Data preservation with secured database system </h6>
+<h6>• Efficient management 
+</h6>
+<h6>• Efficient management 
+</h6>
+<h6>• Emergency ambulance services </h6>
 
-### `npm run build`
+<hr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>For Admin : </p>
+<h6>• Data preservation with secured database system </h6>
+<h6>• Efficient management 
+</h6>
+<h6>• Efficient management 
+</h6>
+<h6>• Emergency ambulance services </h6>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+<p>User friendly and Modern Graphical User Interface </p>
+<p>Locations and Contact Information availability of popular drug stores </p>
+<p>Service ratings of different pharmacies</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<hr>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<h3>Emergency Ambulance Service  </h3>
 
-### Making a Progressive Web App
+<p>Ambulances are equipped for taking sick or injured people to and from hospital, especially in the cases of emergencies. Through our management system, one can avail emergency ambulance services.</p>
+ <hr>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+<h3>Health Tips </h3>
+<p>For a healthy lifestyle, one person should follow proper steps in life. Some health tips to lead a better life are as below. </p>
+<h6>• Always eat healthy
+ 
+</h6>
+<h6>• Consume less salt and sugar
+ </h6>
+<h6>• Reduce intake of harmful fats 
+</h6>
+<h6>• Avoid harmful use of alcohol
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+</h6>
+<h6>• Smoking should be avoided
+ </h6>
+ <h6>• Be active</h6>
+ <h6>• Have regular health check ups>
 
-### Deployment
+ <br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ -->

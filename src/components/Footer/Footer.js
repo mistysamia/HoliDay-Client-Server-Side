@@ -12,7 +12,7 @@ const Footer = () => {
 
                         <article className='col-6 col-md-3 col-sm-3 eachFootercol'>
                             <h2 className='text-start mb-4 '>About</h2>
-                            <p className='text-start mb-5'>Rising cost of healthcare and medicines has become a global concern, and in order to reduce cost across the value chain, pharmaceutical companies from developed markets.</p>
+                            <p className='text-start mb-5'>At Holiday, we believe in the power of travel — and in helping you make the most of every trip. With over 500 million candid traveler reviews, we can help you make the right choice when you shop for hotels, restaurants, and attractions.</p>
                             <div className="input-group flex-nowrap">
                                 <input type="text" className="form-control" placeholder="Please enter your e-mail" aria-label="Username" aria-describedby="addon-wrapping" />
                             </div>
@@ -23,10 +23,10 @@ const Footer = () => {
 
                         <article className='col-6 col-md-3 col-sm-3 eachFootercol'>
                             <h2 className='text-start mb-4 '>How it Works</h2>
-                            <p>• Pharmacy List</p>
-                            <p>• Emergency</p>
-                            <p>• Ambulance</p>
-                            <p>• Medicines</p>
+                            <p>• Packages</p>
+                            <p>• Bookings</p>
+                            <p>• Tours</p>
+                            <p>• Services</p>
                         </article>
 
                         <article className='col-6 col-md-3 col-sm-3 eachFootercol'>
