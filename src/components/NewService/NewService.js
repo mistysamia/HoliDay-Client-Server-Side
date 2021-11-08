@@ -70,6 +70,10 @@ const NewService = () => {
         setLocation(locationSet);
     }
 
+    const handleNewService = () =>{
+        setShow(false);
+        reset();
+    }
     const onSubmit = data => {
         var reviewStar = parseFloat(review);
         data.packagename = packagename;
@@ -163,13 +167,13 @@ const NewService = () => {
                                     keyboard={false}
                                 >
                                     <Modal.Header closeButton>
-                                        <Modal.Title>Modal title</Modal.Title>
+                                        <Modal.Title>Confirmation Message</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         New Tour Package Added!
                                     </Modal.Body>
                                     <Modal.Footer>
-                                        <Button variant="primary" >Okay</Button>
+                                        <Button variant="primary" onClick={handleNewService}>Okay</Button>
                                     </Modal.Footer>
                                 </Modal>
                             </div>
