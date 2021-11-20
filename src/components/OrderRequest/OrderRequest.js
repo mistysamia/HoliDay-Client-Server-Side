@@ -40,7 +40,7 @@ const OrderRequest = (props) => {
         data.userId = userId;
         data.img = img;
         console.log("sc  ", data, "   ", typeof (data));
-        fetch(`https://spooky-spell-89697.herokuapp.com/orders`, {
+        fetch(`https://ancient-anchorage-65062.herokuapp.com/orders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -70,7 +70,7 @@ const OrderRequest = (props) => {
         data.userId = userId;
         data.img = img;
         console.log("sc  ", data, "   ", typeof (data));
-        fetch(`https://spooky-spell-89697.herokuapp.com/deleteordersreq`, {
+        fetch(`https://ancient-anchorage-65062.herokuapp.com/deleteordersreq`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

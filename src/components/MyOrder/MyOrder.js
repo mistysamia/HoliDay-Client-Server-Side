@@ -12,14 +12,14 @@ const MyOrder = () => {
     const [pendingOrder, setPendingOrder] = useState([]);
 
     useEffect(() => {
-        fetch(`https://spooky-spell-89697.herokuapp.com/orderrequest`)
+        fetch(`https://ancient-anchorage-65062.herokuapp.com/orderrequest`)
             .then(res => res.json())
             .then(data => {
                 setPendingOrder(data.orderrequest);
             });
     }, []);
     useEffect(() => {
-        fetch(`https://spooky-spell-89697.herokuapp.com/allorderdisplay`)
+        fetch(`https://ancient-anchorage-65062.herokuapp.com/allorderdisplay`)
             .then(res => res.json())
             .then(data => {
                 setmyOrder(data.allOrderDisplay);

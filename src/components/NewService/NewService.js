@@ -89,7 +89,7 @@ const NewService = () => {
 
 
         console.log(data);
-        fetch(`https://spooky-spell-89697.herokuapp.com/addnewpackage`, {
+        fetch(`https://ancient-anchorage-65062.herokuapp.com/addnewpackage`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

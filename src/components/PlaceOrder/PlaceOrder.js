@@ -88,7 +88,7 @@ const PlaceOrder = () => {
         data.img=packages.img;
        
         console.log(data);
-        fetch(`https://spooky-spell-89697.herokuapp.com/packagerequest`, {
+        fetch(`https://ancient-anchorage-65062.herokuapp.com/packagerequest`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

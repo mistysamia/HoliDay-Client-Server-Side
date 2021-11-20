@@ -21,7 +21,7 @@ const AllOrdersDisplay = (props) => {
     const handleDeleteNewOrder = () => {
         const data = {};
         data.userId = userId;
-        fetch(`https://spooky-spell-89697.herokuapp.com/deleteorders`, {
+        fetch(`https://ancient-anchorage-65062.herokuapp.com/deleteorders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
